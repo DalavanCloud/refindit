@@ -33,6 +33,7 @@ module.exports = {
 		'pubmed',
 		'refbank',
 		'gnub',
+		'biostor',		
 		//'mendeley'
 	],
 	advancedDBs: [

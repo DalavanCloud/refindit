@@ -321,7 +321,12 @@ function doSearch(type, trigger) {
 			$("#results").html('');
 			oReq.addEventListener("load",      allDBsReady, false);
 			oReq.addEventListener("progress", someDBsReady, false);
-			var api_call = 'https://' + window.location.host  +'/find?' + query;
+			var api_call = 'http://' + window.location.host  +'/find?' + query;
+			
+			api_call += '&db=biostor';
+			console.log(api_call );
+			
+			
 			$('#queries').show();
 			$('#api').attr('href', api_call);
 			oReq.open("get", api_call + '&more=1', true);
@@ -337,7 +342,7 @@ function callFormattingService(dropdown) {
 	var textarea = $('#styles_chosen').next();
 	var oReq  = new XMLHttpRequest();
 		oReq.onload = function(){ textarea.html(this.responseText); };
-		var server = 'https://' + window.location.host;
+		var server = 'http://' + window.location.host;
 		oReq.open("get", server +'/format?ref=' + ref + '&style=' + style, true);
 		oReq.send();
 	return false;
