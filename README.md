@@ -33,6 +33,12 @@ The following is based in part on [Dockerizing a Node.js web app](https://nodejs
 7. Login in to Docker `docker login -u <username> -p <password>`
 8. Push to Docker Hub `docker push rdmpage/refindit`
 
+### Docker notes
+If when rebuilding the docker image you get file permission errors, you need to stop and start the docker machine:
+```
+docker-machine stop
+docker-machine start
+```
 
 
 ## Data sources ##
