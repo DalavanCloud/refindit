@@ -20,6 +20,21 @@ Start finding now at [ReFindit.org](http://refindit.org).
 3. `node app.js`
 4. In your browser, go to [http://localhost:5000](http://localhost:5000)
 
+## Docker ##
+
+The following is based in part on [Dockerizing a Node.js web app](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/). After creating Dockerfile:
+
+1. cd to repository directory
+2. Build the image `docker build -t rdmpage/refindit .` (note the “.” at the end of the command).
+3. To run on local machine `docker run -p 5000:5000 -d rdmpage/refindit`
+4. Use `docker ps` to get container id
+5. To view get IP address of docker on local machine `docker-machine ip default` (e.g. http://192.168.99.100 )
+6. Go to that address and view refindit.
+7. Login in to Docker `docker login -u <username> -p <password>`
+8. Push to Docker Hub `docker push rdmpage/refindit`
+
+
+
 ## Data sources ##
 ReFindit currently supports the following search types:
 
