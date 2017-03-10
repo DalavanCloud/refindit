@@ -276,6 +276,10 @@ form .source {
   background-color: #dddddd;
 }
 
+.BioStor {
+  background-color: rgb(234,224,190);
+}
+
 .field {
   float: left;
   text-align: left;
