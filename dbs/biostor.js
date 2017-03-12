@@ -10,6 +10,9 @@ var tools = require('./tools');
 
 function biostorSimple(text, limit) {
   p('biostorSimple ' + text, 1);
+  text = text.replace(/:/g, ' ');
+  text = text.replace(/\(/g, ' ');
+  text = text.replace(/\)/g, ' ');
 	return {
 		protocol: 'http',
 		host: 'biostor.org',
