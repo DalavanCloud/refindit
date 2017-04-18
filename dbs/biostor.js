@@ -13,6 +13,7 @@ function biostorSimple(text, limit) {
   text = text.replace(/:/g, ' ');
   text = text.replace(/\(/g, ' ');
   text = text.replace(/\)/g, ' ');
+  text = text.replace(/\//g, ' ');
 	return {
 		protocol: 'http',
 		host: 'biostor.org',
